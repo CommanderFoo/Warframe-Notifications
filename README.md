@@ -1,6 +1,6 @@
 # Waframe Notifications
 
-Still a work in progress project.
+Still a work in progress.
 
 Basically this will allow you to filter which Warframe alerts you are interested in.
 
