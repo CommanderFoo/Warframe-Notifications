@@ -50,7 +50,7 @@ public class Warframe_Notifications {
 	}
 
 	/**
-	 * Creates a little icon in the system tray so we can refresh the list and exit.
+	 * Creates a little icon in the system tray so we can exit and adjust settings.
 	 */
 
 	private static void create_system_tray_icon(){
