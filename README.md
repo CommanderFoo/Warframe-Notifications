@@ -1,4 +1,4 @@
-# Waframe Notifications
+# Warframe Notifications
 
 Still a work in progress.
 
