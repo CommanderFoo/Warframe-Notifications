@@ -88,6 +88,7 @@ public class Warframe_Notifications {
 						@Override
 						public void run(){
 							settings_stage.show();
+							settings_stage.toFront();
 						}
 					});
 				});
