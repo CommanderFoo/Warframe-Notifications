@@ -7,11 +7,21 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Properties;
+
 public class Settings_Application {
 
 	public static Stage settings_stage;
 
-	public static void launch(Stage stage) throws Exception {
+	public static Properties properties;
+
+	public static void launch(Stage stage, Properties props) throws Exception {
+		properties = props;
+
 		Platform.setImplicitExit(false);
 
 		Parent root = FXMLLoader.load(Settings_Application.class.getResource("/resources/FXML/settings.fxml"));
@@ -27,8 +37,18 @@ public class Settings_Application {
 		settings_stage = stage;
 	}
 
-	public static void save_settings(Settings_Controller controller){
-		System.out.println("saving...");
+	public static void save_settings(HashMap<String, Boolean> settings_values){
+		String path = Settings_Application.class.getResource("/resources/config.properties").getPath();
+
+		settings_values.forEach((k, v) -> properties.setProperty(k, (v)? "1": "0"));
+
+		try {
+			properties.store(new FileOutputStream(path), null);
+		} catch(FileNotFoundException e){
+			e.printStackTrace();
+		} catch(IOException e){
+			e.printStackTrace();
+		}
 	}
 
 }

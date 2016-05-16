@@ -11,7 +11,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
 import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class Settings_Controller implements Initializable {
 
@@ -19,7 +19,7 @@ public class Settings_Controller implements Initializable {
 	private BorderPane root_node;
 
 	@FXML
-	private GridPane auras_grid;
+	private GridPane grid_auras;
 
 	@FXML
 	private CheckBox corrosive_projection;
@@ -79,7 +79,7 @@ public class Settings_Controller implements Initializable {
 	private CheckBox theifs_wit;
 
 	@FXML
-	private GridPane blueprints_grid;
+	private GridPane grid_blueprints;
 
 	@FXML
 	private CheckBox orokin_catalyst;
@@ -89,6 +89,9 @@ public class Settings_Controller implements Initializable {
 
 	@FXML
 	private CheckBox forma;
+
+	@FXML
+	private CheckBox exilus_adapter;
 
 	@FXML
 	private GridPane grid_misc;
@@ -181,7 +184,7 @@ public class Settings_Controller implements Initializable {
 	private CheckBox nitain;
 
 	@FXML
-	private CheckBox oroki_cell;
+	private CheckBox orokin_cell;
 
 	@FXML
 	private CheckBox rubedo;
@@ -347,21 +350,50 @@ public class Settings_Controller implements Initializable {
 		Settings_Application.settings_stage.close();
 	}
 
+	private List<ObservableList<Node>> combined_lists;
+
 	@FXML
 	void save_settings(ActionEvent event){
-		ObservableList<Node> nodes = this.auras_grid.getChildren();
+		HashMap<String, Boolean> settings_map = new HashMap<String, Boolean>();
 
-		for(Node n : nodes){
-			CheckBox box = (CheckBox) n;
+		for(ObservableList<Node> nodes : this.combined_lists){
+			nodes.forEach(n -> {
+				CheckBox box = (CheckBox) n;
+				String key = n.getId();
 
-			System.out.println(box.getText());
+				settings_map.put(key, box.isSelected());
+			});
 		}
 
-		Settings_Application.save_settings(this);
+		Settings_Application.save_settings(settings_map);
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources){
-		// Load settings here
+		this.combined_lists = Arrays.asList(
+
+				this.grid_auras.getChildren(),
+				this.grid_blueprints.getChildren(),
+				this.grid_misc.getChildren(),
+				this.grid_mods.getChildren(),
+				this.grid_resources.getChildren(),
+				this.grid_vauban.getChildren(),
+				this.grid_void_keys.getChildren(),
+				this.grid_weapons.getChildren()
+
+		);
+
+		for(ObservableList<Node> nodes : this.combined_lists){
+			nodes.forEach(n -> {
+				CheckBox box = (CheckBox) n;
+				String key = n.getId();
+
+				String prop = Settings_Application.properties.getProperty(key);
+
+				if(prop.equals("1")){
+					box.setSelected(true);
+				}
+			});
+		}
 	}
 }

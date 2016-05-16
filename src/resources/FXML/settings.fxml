@@ -19,7 +19,7 @@
 				   <content>
 					   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
 						   <children>
-							   <GridPane fx:id="auras_grid" layoutX="60.0" layoutY="66.0" vgap="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+							   <GridPane fx:id="grid_auras" layoutX="60.0" layoutY="66.0" vgap="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
 								   <columnConstraints>
 									   <ColumnConstraints hgrow="SOMETIMES" />
 									   <ColumnConstraints hgrow="SOMETIMES" minWidth="140.0" prefWidth="100.0" />
@@ -71,7 +71,7 @@
 				   <content>
 					   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
 						   <children>
-							   <GridPane fx:id="blueprints_grid" layoutX="70.0" layoutY="59.0" vgap="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+							   <GridPane fx:id="grid_blueprints" layoutX="70.0" layoutY="59.0" vgap="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
 								   <columnConstraints>
 									   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 									   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -79,6 +79,7 @@
 								   </columnConstraints>
 								   <rowConstraints>
 									   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 								   </rowConstraints>
 								   <padding>
 									   <Insets left="20.0" />
@@ -87,6 +88,7 @@
 									   <CheckBox fx:id="orokin_catalyst" mnemonicParsing="false" text="Orokin Catalyst" />
 									   <CheckBox fx:id="orokin_reactor" mnemonicParsing="false" text="Orokin Reactor" GridPane.columnIndex="1" />
 									   <CheckBox fx:id="forma" mnemonicParsing="false" text="Forma" GridPane.columnIndex="2" />
+                              <CheckBox fx:id="exilus_adapter" mnemonicParsing="false" text="Exilus Adapter" GridPane.rowIndex="1" />
 								   </children>
 							   </GridPane>
 						   </children></AnchorPane>
@@ -192,7 +194,7 @@
 									   <CheckBox fx:id="neural_sensors" mnemonicParsing="false" text="Neural Sensors" GridPane.rowIndex="3" />
 									   <CheckBox fx:id="neurodes" mnemonicParsing="false" text="Neurodes" GridPane.columnIndex="2" GridPane.rowIndex="2" />
 									   <CheckBox fx:id="nitain" mnemonicParsing="false" text="Nitain" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-									   <CheckBox fx:id="oroki_cell" mnemonicParsing="false" text="Orokin Cell" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+									   <CheckBox fx:id="orokin_cell" mnemonicParsing="false" text="Orokin Cell" GridPane.columnIndex="2" GridPane.rowIndex="3" />
 									   <CheckBox fx:id="rubedo" mnemonicParsing="false" text="Rubedo" GridPane.rowIndex="5" />
 									   <CheckBox fx:id="salvage" mnemonicParsing="false" text="Salvage" GridPane.columnIndex="1" GridPane.rowIndex="5" />
 									   <CheckBox fx:id="plastids" mnemonicParsing="false" text="Plastids" GridPane.columnIndex="1" GridPane.rowIndex="4" />
@@ -276,9 +278,9 @@
 									   <CheckBox fx:id="sabotage_ii" mnemonicParsing="false" text="Sabotage II" GridPane.columnIndex="1" GridPane.rowIndex="5" />
 									   <CheckBox fx:id="sabotage_iii" mnemonicParsing="false" text="Sabotage III" GridPane.columnIndex="2" GridPane.rowIndex="5" />
 									   <CheckBox fx:id="sabotage_iv" mnemonicParsing="false" text="Sabotage IV" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-									   <CheckBox fx:id="interception_i" mnemonicParsing="false" text="Interception I" GridPane.rowIndex="3" />
-									   <CheckBox fx:id="interception_ii" mnemonicParsing="false" text="Interception II" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-									   <CheckBox fx:id="interception_iii" mnemonicParsing="false" text="Interception III" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+									   <CheckBox fx:id="interception_i" disable="true" mnemonicParsing="false" text="Interception I" GridPane.rowIndex="3" />
+									   <CheckBox fx:id="interception_ii" disable="true" mnemonicParsing="false" text="Interception II" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+									   <CheckBox fx:id="interception_iii" disable="true" mnemonicParsing="false" text="Interception III" GridPane.columnIndex="2" GridPane.rowIndex="3" />
 									   <CheckBox fx:id="interception_iv" mnemonicParsing="false" text="Interception IV" GridPane.columnIndex="3" GridPane.rowIndex="3" />
 									   <CheckBox fx:id="survival_i" mnemonicParsing="false" text="Survival I" GridPane.rowIndex="6" />
 									   <CheckBox fx:id="survival_ii" mnemonicParsing="false" text="Survival II" GridPane.columnIndex="1" GridPane.rowIndex="6" />
