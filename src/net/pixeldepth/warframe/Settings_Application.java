@@ -38,12 +38,10 @@ public class Settings_Application {
 	}
 
 	public static void save_settings(HashMap<String, Boolean> settings_values){
-		String path = Settings_Application.class.getResource("/resources/config.properties").getPath();
-
 		settings_values.forEach((k, v) -> properties.setProperty(k, (v)? "1": "0"));
 
 		try {
-			properties.store(new FileOutputStream(path), null);
+			properties.store(new FileOutputStream("config.properties"), null);
 		} catch(FileNotFoundException e){
 			e.printStackTrace();
 		} catch(IOException e){
