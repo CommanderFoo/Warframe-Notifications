@@ -390,7 +390,7 @@ public class Settings_Controller implements Initializable {
 
 				String prop = Settings_Application.properties.getProperty(key);
 
-				if(prop.equals("1")){
+				if(prop != null && prop.equals("1")){
 					box.setSelected(true);
 				}
 			});
