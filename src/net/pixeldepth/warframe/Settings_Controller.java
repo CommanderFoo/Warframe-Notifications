@@ -372,14 +372,14 @@ public class Settings_Controller implements Initializable {
 	public void initialize(URL location, ResourceBundle resources){
 		this.combined_lists = Arrays.asList(
 
-				this.grid_auras.getChildren(),
-				this.grid_blueprints.getChildren(),
-				this.grid_misc.getChildren(),
-				this.grid_mods.getChildren(),
-				this.grid_resources.getChildren(),
-				this.grid_vauban.getChildren(),
-				this.grid_void_keys.getChildren(),
-				this.grid_weapons.getChildren()
+			this.grid_auras.getChildren(),
+			this.grid_blueprints.getChildren(),
+			this.grid_misc.getChildren(),
+			this.grid_mods.getChildren(),
+			this.grid_resources.getChildren(),
+			this.grid_vauban.getChildren(),
+			this.grid_void_keys.getChildren(),
+			this.grid_weapons.getChildren()
 
 		);
 
