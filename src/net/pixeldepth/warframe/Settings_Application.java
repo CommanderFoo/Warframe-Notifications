@@ -37,11 +37,12 @@ public class Settings_Application {
 		settings_stage = stage;
 	}
 
-	public static void save_settings(HashMap<String, Boolean> settings_values){
+	public static void save_settings(HashMap<String, Boolean> settings_values, Settings_Controller controller){
 		settings_values.forEach((k, v) -> properties.setProperty(k, (v)? "1": "0"));
 
 		try {
 			properties.store(new FileOutputStream("config.properties"), null);
+			controller.reset_save_button();
 		} catch(FileNotFoundException e){
 			e.printStackTrace();
 		} catch(IOException e){

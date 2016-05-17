@@ -1,12 +1,13 @@
 package net.pixeldepth.warframe;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
@@ -346,6 +347,18 @@ public class Settings_Controller implements Initializable {
 	private Button close;
 
 	@FXML
+	private RadioButton platform_ps4;
+
+	@FXML
+	private ToggleGroup platform;
+
+	@FXML
+	private RadioButton platform_xbox;
+
+	@FXML
+	private RadioButton platform_pc;
+
+	@FXML
 	void close_settings(ActionEvent event){
 		Settings_Application.settings_stage.close();
 	}
@@ -365,21 +378,21 @@ public class Settings_Controller implements Initializable {
 			});
 		}
 
-		Settings_Application.save_settings(settings_map);
+		Settings_Application.save_settings(settings_map, this);
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources){
 		this.combined_lists = Arrays.asList(
 
-			this.grid_auras.getChildren(),
-			this.grid_blueprints.getChildren(),
-			this.grid_misc.getChildren(),
-			this.grid_mods.getChildren(),
-			this.grid_resources.getChildren(),
-			this.grid_vauban.getChildren(),
-			this.grid_void_keys.getChildren(),
-			this.grid_weapons.getChildren()
+				this.grid_auras.getChildren(),
+				this.grid_blueprints.getChildren(),
+				this.grid_misc.getChildren(),
+				this.grid_mods.getChildren(),
+				this.grid_resources.getChildren(),
+				this.grid_vauban.getChildren(),
+				this.grid_void_keys.getChildren(),
+				this.grid_weapons.getChildren()
 
 		);
 
@@ -393,7 +406,41 @@ public class Settings_Controller implements Initializable {
 				if(prop != null && prop.equals("1")){
 					box.setSelected(true);
 				}
+
+				box.selectedProperty().addListener(o -> {
+					this.save.setStyle("-fx-font-weight: bold");
+				});
 			});
 		}
+
+		String ps4 = Settings_Application.properties.getProperty("platform_ps4");
+		String xbox = Settings_Application.properties.getProperty("platform_xbox");
+		String pc = Settings_Application.properties.getProperty("platform_pc");
+
+		if(pc != null && pc.equals("1")){
+			this.platform.selectToggle(this.platform_pc);
+		} else if(xbox != null && xbox.equals("1")){
+			this.platform.selectToggle(this.platform_xbox);
+		} else {
+			this.platform.selectToggle(this.platform_ps4);
+		}
+
+		this.platform.selectedToggleProperty().addListener((o, ov, nv) -> {
+			RadioButton old_radio = (RadioButton) ov;
+			RadioButton new_radio = (RadioButton) nv;
+
+			String old_setting = old_radio.getId();
+			String new_setting = new_radio.getId();
+
+			Settings_Application.properties.setProperty(old_setting, "0");
+			Settings_Application.properties.setProperty(new_setting, "1");
+
+			this.save.setStyle("-fx-font-weight: bold");
+		});
 	}
+
+	public void reset_save_button(){
+		this.save.setStyle("-fx-font-weight: normal");
+	}
+
 }

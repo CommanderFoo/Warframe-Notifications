@@ -7,6 +7,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
 
+// http://content.warframe.com/dynamic/rss.php
+// http://content.ps4.warframe.com/dynamic/rss.php
+// http://content.xb1.warframe.com/dynamic/rss.php
+
 public class Warframe_Notifications {
 
 	/**
