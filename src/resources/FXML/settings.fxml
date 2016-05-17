@@ -110,7 +110,7 @@
 									   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 								   </rowConstraints>
 								   <children>
-									   <CheckBox fx:id="fusion_cores" mnemonicParsing="false" text="Fusion Cores" />
+									   <CheckBox fx:id="fusion" mnemonicParsing="false" text="Fusion Cores" />
 									   <CheckBox fx:id="kubrow_egg" mnemonicParsing="false" text="Kubrow Egg" GridPane.columnIndex="1" />
 								   </children>
 								   <padding>
@@ -227,9 +227,9 @@
 									   <Insets left="20.0" />
 								   </padding>
 								   <children>
-									   <CheckBox fx:id="helmet" mnemonicParsing="false" text="Helmet" />
-									   <CheckBox fx:id="chassis" mnemonicParsing="false" text="Chassis" GridPane.columnIndex="1" />
-									   <CheckBox fx:id="systems" mnemonicParsing="false" text="Systems" GridPane.columnIndex="2" />
+									   <CheckBox fx:id="vauban_helmet" mnemonicParsing="false" text="Helmet" />
+									   <CheckBox fx:id="vauban_chassis" mnemonicParsing="false" text="Chassis" GridPane.columnIndex="1" />
+									   <CheckBox fx:id="vauban_systems" mnemonicParsing="false" text="Systems" GridPane.columnIndex="2" />
 								   </children>
 							   </GridPane>
 						   </children>

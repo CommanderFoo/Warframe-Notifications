@@ -1,17 +1,20 @@
 package net.pixeldepth.warframe;
 
+import com.sun.istack.internal.Nullable;
 import javafx.application.Platform;
 import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
-
-// http://content.warframe.com/dynamic/rss.php
-// http://content.ps4.warframe.com/dynamic/rss.php
-// http://content.xb1.warframe.com/dynamic/rss.php
+import java.util.Timer;
+import java.util.regex.Pattern;
 
 public class Warframe_Notifications {
+
+	public static final String PS4_FEED = "http://content.ps4.warframe.com/dynamic/rss.php";
+	public static final String XBOX_FEED = "http://content.xb1.warframe.com/dynamic/rss.php";
+	public static final String PC_FEED = "http://content.warframe.com/dynamic/rss.php";
 
 	/**
 	 * Polling time.  Default is to check every 180 seconds
@@ -19,7 +22,7 @@ public class Warframe_Notifications {
 	 * @property {Integer} interval
 	 */
 
-	public static int interval = 180000;
+	public static final int interval = 5000;
 
 	/**
 	 * A system tray icon is created so that we can exit and change settings.
@@ -44,13 +47,50 @@ public class Warframe_Notifications {
 
 	private static Stage settings_stage;
 
+	public static Timer timer;
+
+	public static boolean timer_running = false;
+
 	public static void init(Stage stage){
 		settings_stage = stage;
 		create_system_tray_icon();
+	}
 
-		if(system_tray_created){
-			//this.run_task();
+	public static void run_task(StringBuilder match_against){
+		String pattern_grp = match_against.toString().replace("_", " ");
+		Pattern pattern = Pattern.compile("(" + pattern_grp + ")", Pattern.CASE_INSENSITIVE);
+
+		// Cancel current timer and create a new one if this method
+		// is ran again (i.e settings updated)
+
+		if(timer_running){
+			timer.cancel();
+			timer.purge();
+			timer_running = false;
 		}
+
+		if(system_tray_created && match_against.length() > 3){
+			String feed = get_platform_feed();
+
+			timer = new Timer();
+			timer.schedule(new Task(pattern, feed), 0, interval);
+			timer_running = true;
+		}
+	}
+
+	private static String get_platform_feed(){
+		String feed = PS4_FEED;
+
+		String xbox = Settings_Application.properties.getProperty("platform_xbox");
+		String pc = Settings_Application.properties.getProperty("platform_pc");
+
+		if(xbox != null && xbox.equals("1")){
+			feed = XBOX_FEED;
+		} else if(pc != null && pc.equals("1")){
+			feed = PC_FEED;
+		}
+
+		return feed;
 	}
 
 	/**
@@ -110,6 +150,7 @@ public class Warframe_Notifications {
 	 * @return {ImageIcon}
 	 */
 
+	@Nullable
 	private static Image create_image(String path, String desc){
 		URL image_url = Warframe_Notifications.class.getResource(path);
 

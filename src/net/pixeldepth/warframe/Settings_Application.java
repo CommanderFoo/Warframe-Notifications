@@ -38,11 +38,24 @@ public class Settings_Application {
 	}
 
 	public static void save_settings(HashMap<String, Boolean> settings_values, Settings_Controller controller){
-		settings_values.forEach((k, v) -> properties.setProperty(k, (v)? "1": "0"));
+		StringBuilder match_against = new StringBuilder();
+
+		settings_values.forEach((k, v) -> {
+			properties.setProperty(k, (v)? "1": "0");
+
+			if(v){
+				if(match_against.length() > 0){
+					match_against.append("|");
+				}
+
+				match_against.append(k);
+			}
+		});
 
 		try {
 			properties.store(new FileOutputStream("config.properties"), null);
 			controller.reset_save_button();
+			Warframe_Notifications.run_task(match_against);
 		} catch(FileNotFoundException e){
 			e.printStackTrace();
 		} catch(IOException e){

@@ -1,7 +1,5 @@
 package net.pixeldepth.warframe;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -98,7 +96,7 @@ public class Settings_Controller implements Initializable {
 	private GridPane grid_misc;
 
 	@FXML
-	private CheckBox fusion_cores;
+	private CheckBox fusion;
 
 	@FXML
 	private CheckBox kubrow_egg;
@@ -215,13 +213,13 @@ public class Settings_Controller implements Initializable {
 	private GridPane grid_vauban;
 
 	@FXML
-	private CheckBox helmet;
+	private CheckBox vauban_helmet;
 
 	@FXML
-	private CheckBox chassis;
+	private CheckBox vauban_chassis;
 
 	@FXML
-	private CheckBox systems;
+	private CheckBox vauban_systems;
 
 	@FXML
 	private GridPane grid_void_keys;
@@ -385,16 +383,18 @@ public class Settings_Controller implements Initializable {
 	public void initialize(URL location, ResourceBundle resources){
 		this.combined_lists = Arrays.asList(
 
-				this.grid_auras.getChildren(),
-				this.grid_blueprints.getChildren(),
-				this.grid_misc.getChildren(),
-				this.grid_mods.getChildren(),
-				this.grid_resources.getChildren(),
-				this.grid_vauban.getChildren(),
-				this.grid_void_keys.getChildren(),
-				this.grid_weapons.getChildren()
+			this.grid_auras.getChildren(),
+			this.grid_blueprints.getChildren(),
+			this.grid_misc.getChildren(),
+			this.grid_mods.getChildren(),
+			this.grid_resources.getChildren(),
+			this.grid_vauban.getChildren(),
+			this.grid_void_keys.getChildren(),
+			this.grid_weapons.getChildren()
 
 		);
+
+		StringBuilder match_against = new StringBuilder();
 
 		for(ObservableList<Node> nodes : this.combined_lists){
 			nodes.forEach(n -> {
@@ -405,6 +405,12 @@ public class Settings_Controller implements Initializable {
 
 				if(prop != null && prop.equals("1")){
 					box.setSelected(true);
+
+					if(match_against.length() > 0){
+						match_against.append("|");
+					}
+
+					match_against.append(key);
 				}
 
 				box.selectedProperty().addListener(o -> {
@@ -413,7 +419,7 @@ public class Settings_Controller implements Initializable {
 			});
 		}
 
-		String ps4 = Settings_Application.properties.getProperty("platform_ps4");
+		//String ps4 = Settings_Application.properties.getProperty("platform_ps4");
 		String xbox = Settings_Application.properties.getProperty("platform_xbox");
 		String pc = Settings_Application.properties.getProperty("platform_pc");
 
@@ -437,10 +443,13 @@ public class Settings_Controller implements Initializable {
 
 			this.save.setStyle("-fx-font-weight: bold");
 		});
+
+		Warframe_Notifications.run_task(match_against);
 	}
 
 	public void reset_save_button(){
 		this.save.setStyle("-fx-font-weight: normal");
 	}
+
 
 }
