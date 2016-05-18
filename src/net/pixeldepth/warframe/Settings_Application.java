@@ -63,4 +63,22 @@ public class Settings_Application {
 		}
 	}
 
+	public static void save_properties(){
+		try {
+			properties.store(new FileOutputStream("config.properties"), null);
+		} catch(FileNotFoundException e){
+			e.printStackTrace();
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+
+	public static long last_alert_time(){
+		if(properties.getProperty("last_alert") != null){
+			return Long.valueOf(properties.getProperty("last_alert"));
+		}
+
+		return 0;
+	}
+
 }

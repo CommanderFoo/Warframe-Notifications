@@ -33,7 +33,7 @@ public class Task extends TimerTask {
 
 				SAXParser p = factory.newSAXParser();
 
-				Warframe_Alert_Handler handler = new Warframe_Alert_Handler();
+				Warframe_Alert_Handler handler = new Warframe_Alert_Handler(this.pattern);
 				p.parse(new InputSource(url.openStream()), handler);
 
 			} catch(ParserConfigurationException e){
@@ -46,6 +46,10 @@ public class Task extends TimerTask {
 		} catch(MalformedURLException e){
 			e.printStackTrace();
 		}
+
+		// Need to save each time so that we store the last alert date
+
+		Settings_Application.save_properties();
 	}
 
 }

@@ -17,12 +17,12 @@ public class Warframe_Notifications {
 	public static final String PC_FEED = "http://content.warframe.com/dynamic/rss.php";
 
 	/**
-	 * Polling time.  Default is to check every 180 seconds
+	 * Polling time.
 	 *
 	 * @property {Integer} interval
 	 */
 
-	public static final int interval = 5000;
+	public static final int interval = 180000;
 
 	/**
 	 * A system tray icon is created so that we can exit and change settings.
@@ -159,6 +159,11 @@ public class Warframe_Notifications {
 		}
 
 		return null;
+	}
+
+	public static void show_notification(Alert alert){
+		Settings_Application.properties.setProperty("last_alert", Long.toString(alert.time));
+		tray_icon.displayMessage("Warframe Alert", alert.title, TrayIcon.MessageType.INFO);
 	}
 
 }
