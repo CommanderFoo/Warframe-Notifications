@@ -39,6 +39,7 @@
 								   <children>
 									   <CheckBox fx:id="corrosive_projection" mnemonicParsing="false" text="Corrosive Projection" />
 									   <CheckBox fx:id="dead_eye" mnemonicParsing="false" text="Dead Eye" GridPane.columnIndex="1" />
+									   <CheckBox fx:id="emp_aura" mnemonicParsing="false" text="EMP Aura" GridPane.columnIndex="2" />
 									   <CheckBox fx:id="loot_detector" mnemonicParsing="false" text="Loot Detector" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 									   <CheckBox fx:id="physique" mnemonicParsing="false" text="Physique" GridPane.columnIndex="2" GridPane.rowIndex="2" />
 									   <CheckBox fx:id="rejuvenation" mnemonicParsing="false" text="Rejuvenation" GridPane.columnIndex="1" GridPane.rowIndex="3" />
@@ -54,13 +55,8 @@
 									   <CheckBox fx:id="steel_charge" mnemonicParsing="false" text="Steel Charge" GridPane.rowIndex="6" />
 									   <CheckBox fx:id="enemy_sense" mnemonicParsing="false" text="Enemy Sense" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 									   <CheckBox fx:id="energy_siphon" mnemonicParsing="false" text="Energy Siphon" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-									   <CheckBox fx:id="infested_impedance" mnemonicParsing="false" text="Infested Impedance" GridPane.rowIndex="2">
-										   <GridPane.margin>
-											   <Insets />
-										   </GridPane.margin>
-									   </CheckBox>
-									   <CheckBox fx:id="theifs_wit" mnemonicParsing="false" text="Thief's Wit" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <CheckBox fx:id="emp_aura" mnemonicParsing="false" text="EMP Aura" GridPane.columnIndex="2" />
+									   <CheckBox fx:id="infested_impedance" mnemonicParsing="false" text="Infested Impedance" GridPane.rowIndex="2" />
+									   <CheckBox fx:id="thiefs_wit" mnemonicParsing="false" text="Thief's Wit" GridPane.columnIndex="1" GridPane.rowIndex="6" />
 								   </children>
 								   <padding>
 									   <Insets left="20.0" />

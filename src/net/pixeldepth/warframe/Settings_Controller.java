@@ -78,7 +78,7 @@ public class Settings_Controller implements Initializable {
 	private CheckBox infested_impedance;
 
 	@FXML
-	private CheckBox theifs_wit;
+	private CheckBox thiefs_wit;
 
 	@FXML
 	private GridPane grid_blueprints;
