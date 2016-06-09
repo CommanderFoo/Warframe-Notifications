@@ -27,6 +27,9 @@ public class Settings_Controller implements Initializable {
 	private CheckBox dead_eye;
 
 	@FXML
+	private CheckBox emp_aura;
+
+	@FXML
 	private CheckBox loot_detector;
 
 	@FXML
