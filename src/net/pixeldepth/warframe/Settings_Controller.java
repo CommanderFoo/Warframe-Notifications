@@ -213,6 +213,15 @@ public class Settings_Controller implements Initializable {
 	private CheckBox tellurium;
 
 	@FXML
+	private CheckBox fieldron;
+
+	@FXML
+	private CheckBox detonite_injector;
+
+	@FXML
+	private CheckBox mutagen_mass;
+
+	@FXML
 	private GridPane grid_vauban;
 
 	@FXML
