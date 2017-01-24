@@ -13,13 +13,13 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane fx:id="root_node" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.pixeldepth.warframe.Settings_Controller">
+<BorderPane fx:id="root_node" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="462.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.pixeldepth.warframe.Settings_Controller">
 	<top>
-		<TabPane maxHeight="350.0" minHeight="350.0" prefHeight="350.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+		<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="708.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
 			<tabs>
 				<Tab text="Auras">
 					<content>
-						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+						<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefWidth="708.0">
 							<children>
 								<GridPane fx:id="grid_auras" layoutX="60.0" layoutY="66.0" vgap="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
 									<columnConstraints>
@@ -28,35 +28,40 @@
 										<ColumnConstraints hgrow="SOMETIMES" minWidth="140.0" prefWidth="100.0" />
 									</columnConstraints>
 									<rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 									</rowConstraints>
 									<children>
-										<CheckBox fx:id="corrosive_projection" mnemonicParsing="false" text="Corrosive Projection" />
-										<CheckBox fx:id="dead_eye" mnemonicParsing="false" text="Dead Eye" GridPane.columnIndex="1" />
-										<CheckBox fx:id="emp_aura" mnemonicParsing="false" text="EMP Aura" GridPane.columnIndex="2" />
-										<CheckBox fx:id="loot_detector" mnemonicParsing="false" text="Loot Detector" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-										<CheckBox fx:id="physique" mnemonicParsing="false" text="Physique" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-										<CheckBox fx:id="rejuvenation" mnemonicParsing="false" text="Rejuvenation" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-										<CheckBox fx:id="rifle_amp" mnemonicParsing="false" text="Rifle Amp" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-										<CheckBox fx:id="enemy_radar" mnemonicParsing="false" text="Enemy Radar" GridPane.rowIndex="1" />
-										<CheckBox fx:id="pistol_scavenger" mnemonicParsing="false" text="Pistol Scavenger" GridPane.rowIndex="3" />
-										<CheckBox fx:id="rifle_scavenger" mnemonicParsing="false" text="Rifle Scavenger" GridPane.rowIndex="4" />
-										<CheckBox fx:id="sniper_scavenger" mnemonicParsing="false" text="Sniper Scavenger" GridPane.rowIndex="5" />
-										<CheckBox fx:id="shotgun_scavenger" mnemonicParsing="false" text="Shotgun Scavenger" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-										<CheckBox fx:id="shield_disruption" mnemonicParsing="false" text="Shield Disruption" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-										<CheckBox fx:id="speed_holster" mnemonicParsing="false" text="Speed Holster" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-										<CheckBox fx:id="sprint_boost" mnemonicParsing="false" text="Sprint Boost" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-										<CheckBox fx:id="steel_charge" mnemonicParsing="false" text="Steel Charge" GridPane.rowIndex="6" />
-										<CheckBox fx:id="enemy_sense" mnemonicParsing="false" text="Enemy Sense" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-										<CheckBox fx:id="energy_siphon" mnemonicParsing="false" text="Energy Siphon" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-										<CheckBox fx:id="infested_impedance" mnemonicParsing="false" text="Infested Impedance" GridPane.rowIndex="2" />
-										<CheckBox fx:id="thiefs_wit" mnemonicParsing="false" text="Thief's Wit" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+										<CheckBox fx:id="corrosive_projection" mnemonicParsing="false" text="Corrosive Projection" GridPane.columnIndex="1" />
+										<CheckBox fx:id="dead_eye" mnemonicParsing="false" text="Dead Eye" GridPane.columnIndex="2" />
+										<CheckBox fx:id="emp_aura" mnemonicParsing="false" text="EMP Aura" GridPane.rowIndex="1" />
+										<CheckBox fx:id="loot_detector" mnemonicParsing="false" text="Loot Detector" GridPane.rowIndex="3" />
+										<CheckBox fx:id="physique" mnemonicParsing="false" text="Physique" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+										<CheckBox fx:id="rejuvenation" mnemonicParsing="false" text="Rejuvenation" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+										<CheckBox fx:id="rifle_amp" mnemonicParsing="false" text="Rifle Amp" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+										<CheckBox fx:id="enemy_radar" mnemonicParsing="false" text="Enemy Radar" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+										<CheckBox fx:id="pistol_scavenger" mnemonicParsing="false" text="Pistol Scavenger" GridPane.rowIndex="4" />
+										<CheckBox fx:id="rifle_scavenger" mnemonicParsing="false" text="Rifle Scavenger" GridPane.rowIndex="5" />
+										<CheckBox fx:id="sniper_scavenger" mnemonicParsing="false" text="Sniper Scavenger" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+										<CheckBox fx:id="shotgun_scavenger" mnemonicParsing="false" text="Shotgun Scavenger" GridPane.rowIndex="6" />
+										<CheckBox fx:id="shield_disruption" mnemonicParsing="false" text="Shield Disruption" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+										<CheckBox fx:id="speed_holster" mnemonicParsing="false" text="Speed Holster" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+										<CheckBox fx:id="energy_siphon" mnemonicParsing="false" text="Energy Siphon" GridPane.rowIndex="2" />
+										<CheckBox fx:id="infested_impedance" mnemonicParsing="false" text="Infested Impedance" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="brief_respite" mnemonicParsing="false" text="Brief Respite" />
+                              <CheckBox fx:id="empowered_blades" mnemonicParsing="false" text="Empowered Blades" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="growing_power" mnemonicParsing="false" text="Growing Power" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="pistol_amp" mnemonicParsing="false" text="Pistol Amp" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="shotgun_amp" mnemonicParsing="false" text="Shotgun Amp" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <CheckBox fx:id="sprint_boost" mnemonicParsing="false" text="Sprint Boost" GridPane.rowIndex="7" />
+                              <CheckBox fx:id="stand_united" mnemonicParsing="false" text="Stand United" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <CheckBox fx:id="steel_charge" mnemonicParsing="false" text="Steel Charge" GridPane.columnIndex="2" GridPane.rowIndex="7" />
 									</children>
 									<padding>
 										<Insets left="20.0" />
@@ -105,10 +110,13 @@
 									</columnConstraints>
 									<rowConstraints>
 										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 									</rowConstraints>
 									<children>
-										<CheckBox fx:id="fusion" mnemonicParsing="false" text="Fusion Cores" />
-										<CheckBox fx:id="kubrow_egg" mnemonicParsing="false" text="Kubrow Egg" GridPane.columnIndex="1" />
+										<CheckBox fx:id="endo" mnemonicParsing="false" text="Endo" />
+										<CheckBox fx:id="kubrow_egg" mnemonicParsing="false" text="Kubrow Egg" GridPane.columnIndex="2" />
+                              <CheckBox fx:id="kavat_genetic_code" mnemonicParsing="false" text="Kavat Genetic Code" GridPane.columnIndex="1" />
+                              <CheckBox fx:id="void_traces" mnemonicParsing="false" text="Void Traces" GridPane.rowIndex="1" />
 									</children>
 									<padding>
 										<Insets left="20.0" />
@@ -237,64 +245,6 @@
 						</AnchorPane>
 					</content>
 				</Tab>
-				<Tab text="Void Keys">
-					<content>
-						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-							<children>
-								<GridPane fx:id="grid_void_keys" layoutX="-50.0" layoutY="37.0" vgap="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
-									<columnConstraints>
-										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-									</columnConstraints>
-									<rowConstraints>
-										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-									</rowConstraints>
-									<padding>
-										<Insets left="20.0" />
-									</padding>
-									<children>
-										<CheckBox fx:id="capture_i" mnemonicParsing="false" text="Capture I" />
-										<CheckBox fx:id="capture_ii" mnemonicParsing="false" text="Capture II" GridPane.columnIndex="1" />
-										<CheckBox fx:id="capture_iii" mnemonicParsing="false" text="Capture III" GridPane.columnIndex="2" />
-										<CheckBox fx:id="capture_iv" mnemonicParsing="false" text="Capture IV" GridPane.columnIndex="3" />
-										<CheckBox fx:id="defense_i" mnemonicParsing="false" text="Defense I" GridPane.rowIndex="1" />
-										<CheckBox fx:id="defense_ii" mnemonicParsing="false" text="Defense II" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-										<CheckBox fx:id="defense_iii" mnemonicParsing="false" text="Defense III" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-										<CheckBox fx:id="defense_iv" mnemonicParsing="false" text="Defense IV" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-										<CheckBox fx:id="exterminate_i" mnemonicParsing="false" text="Exterminate I" GridPane.rowIndex="2" />
-										<CheckBox fx:id="exterminate_ii" mnemonicParsing="false" text="Exterminate II" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-										<CheckBox fx:id="exterminate_iii" mnemonicParsing="false" text="Exterminate III" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-										<CheckBox fx:id="exterminate_iv" mnemonicParsing="false" text="Exterminate IV" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-										<CheckBox fx:id="mobile_defense_i" mnemonicParsing="false" text="Mobile Defense I" GridPane.rowIndex="4" />
-										<CheckBox fx:id="mobile_defense_ii" mnemonicParsing="false" text="Mobile Defense II" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-										<CheckBox fx:id="mobile_defense_iii" mnemonicParsing="false" text="Mobile Defense III" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-										<CheckBox fx:id="mobile_defense_iv" mnemonicParsing="false" text="Mobile Defense IV" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-										<CheckBox fx:id="sabotage_i" mnemonicParsing="false" text="Sabotage I" GridPane.rowIndex="5" />
-										<CheckBox fx:id="sabotage_ii" mnemonicParsing="false" text="Sabotage II" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-										<CheckBox fx:id="sabotage_iii" mnemonicParsing="false" text="Sabotage III" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-										<CheckBox fx:id="sabotage_iv" mnemonicParsing="false" text="Sabotage IV" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-										<CheckBox fx:id="interception_i" disable="true" mnemonicParsing="false" text="Interception I" GridPane.rowIndex="3" />
-										<CheckBox fx:id="interception_ii" disable="true" mnemonicParsing="false" text="Interception II" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-										<CheckBox fx:id="interception_iii" disable="true" mnemonicParsing="false" text="Interception III" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-										<CheckBox fx:id="interception_iv" mnemonicParsing="false" text="Interception IV" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-										<CheckBox fx:id="survival_i" mnemonicParsing="false" text="Survival I" GridPane.rowIndex="6" />
-										<CheckBox fx:id="survival_ii" mnemonicParsing="false" text="Survival II" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-										<CheckBox fx:id="survival_iii" mnemonicParsing="false" text="Survival III" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-										<CheckBox fx:id="survival_iv" mnemonicParsing="false" text="Survival IV" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-									</children>
-								</GridPane>
-							</children>
-						</AnchorPane>
-					</content>
-				</Tab>
 				<Tab text="Weapons">
 					<content>
 						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -333,7 +283,7 @@
 		</TabPane>
 	</top>
 	<bottom>
-		<AnchorPane prefHeight="40.0" style="-fx-border-width: 1px 0 0 0 0; -fx-border-color: #b5b5b5; -fx-background-color: #dddddd;">
+		<AnchorPane prefHeight="40.0" prefWidth="708.0" style="-fx-border-width: 1px 0 0 0 0; -fx-border-color: #b5b5b5; -fx-background-color: #dddddd;">
 			<children>
 				<Button fx:id="save" layoutY="5.0" mnemonicParsing="false" onAction="#save_settings" prefWidth="120.0" text="Save Settings" AnchorPane.rightAnchor="15.0" />
 				<Button fx:id="close" layoutY="5.0" mnemonicParsing="false" onAction="#close_settings" prefWidth="65.0" text="Close" AnchorPane.rightAnchor="145.0" />

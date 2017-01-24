@@ -20,6 +20,11 @@ public class Settings_Controller implements Initializable {
 	@FXML
 	private GridPane grid_auras;
 
+	// Auras
+
+	@FXML
+	private CheckBox brief_respite;
+
 	@FXML
 	private CheckBox corrosive_projection;
 
@@ -30,10 +35,31 @@ public class Settings_Controller implements Initializable {
 	private CheckBox emp_aura;
 
 	@FXML
+	private CheckBox empowered_blades;
+
+	@FXML
+	private CheckBox enemy_radar;
+
+	@FXML
+	private CheckBox energy_siphon;
+
+	@FXML
+	private CheckBox growing_power;
+
+	@FXML
+	private CheckBox infested_impedance;
+
+	@FXML
 	private CheckBox loot_detector;
 
 	@FXML
 	private CheckBox physique;
+
+	@FXML
+	private CheckBox pistol_amp;
+
+	@FXML
+	private CheckBox pistol_scavenger;
 
 	@FXML
 	private CheckBox rejuvenation;
@@ -42,22 +68,19 @@ public class Settings_Controller implements Initializable {
 	private CheckBox rifle_amp;
 
 	@FXML
-	private CheckBox enemy_radar;
-
-	@FXML
-	private CheckBox pistol_scavenger;
-
-	@FXML
 	private CheckBox rifle_scavenger;
 
 	@FXML
-	private CheckBox sniper_scavenger;
+	private CheckBox shield_disruption;
+
+	@FXML
+	private CheckBox shotgun_amp;
 
 	@FXML
 	private CheckBox shotgun_scavenger;
 
 	@FXML
-	private CheckBox shield_disruption;
+	private CheckBox sniper_scavenger;
 
 	@FXML
 	private CheckBox speed_holster;
@@ -66,22 +89,16 @@ public class Settings_Controller implements Initializable {
 	private CheckBox sprint_boost;
 
 	@FXML
+	private CheckBox stand_united;
+
+	@FXML
 	private CheckBox steel_charge;
 
-	@FXML
-	private CheckBox enemy_sense;
-
-	@FXML
-	private CheckBox energy_siphon;
-
-	@FXML
-	private CheckBox infested_impedance;
-
-	@FXML
-	private CheckBox thiefs_wit;
 
 	@FXML
 	private GridPane grid_blueprints;
+
+	// Blueprints
 
 	@FXML
 	private CheckBox orokin_catalyst;
@@ -95,17 +112,29 @@ public class Settings_Controller implements Initializable {
 	@FXML
 	private CheckBox exilus_adapter;
 
+
 	@FXML
 	private GridPane grid_misc;
 
+	// Misc
+
 	@FXML
-	private CheckBox fusion;
+	private CheckBox endo;
+
+	@FXML
+	private CheckBox kavat_genetic_code;
 
 	@FXML
 	private CheckBox kubrow_egg;
 
 	@FXML
+	private CheckBox void_traces;
+
+
+	@FXML
 	private GridPane grid_mods;
+
+	// Mods
 
 	@FXML
 	private CheckBox accelerated_blast;
@@ -155,8 +184,11 @@ public class Settings_Controller implements Initializable {
 	@FXML
 	private CheckBox wildfire;
 
+
 	@FXML
 	private GridPane grid_resources;
+
+	// Resources
 
 	@FXML
 	private CheckBox alloy_plate;
@@ -221,8 +253,11 @@ public class Settings_Controller implements Initializable {
 	@FXML
 	private CheckBox mutagen_mass;
 
+
 	@FXML
 	private GridPane grid_vauban;
+
+	// Vauban parts
 
 	@FXML
 	private CheckBox vauban_helmet;
@@ -233,95 +268,11 @@ public class Settings_Controller implements Initializable {
 	@FXML
 	private CheckBox vauban_systems;
 
-	@FXML
-	private GridPane grid_void_keys;
-
-	@FXML
-	private CheckBox capture_i;
-
-	@FXML
-	private CheckBox capture_ii;
-
-	@FXML
-	private CheckBox capture_iii;
-
-	@FXML
-	private CheckBox capture_iv;
-
-	@FXML
-	private CheckBox defense_i;
-
-	@FXML
-	private CheckBox defense_ii;
-
-	@FXML
-	private CheckBox defense_iii;
-
-	@FXML
-	private CheckBox defense_iv;
-
-	@FXML
-	private CheckBox exterminate_i;
-
-	@FXML
-	private CheckBox exterminate_ii;
-
-	@FXML
-	private CheckBox exterminate_iii;
-
-	@FXML
-	private CheckBox exterminate_iv;
-
-	@FXML
-	private CheckBox mobile_defense_i;
-
-	@FXML
-	private CheckBox mobile_defense_ii;
-
-	@FXML
-	private CheckBox mobile_defense_iii;
-
-	@FXML
-	private CheckBox mobile_defense_iv;
-
-	@FXML
-	private CheckBox sabotage_i;
-
-	@FXML
-	private CheckBox sabotage_ii;
-
-	@FXML
-	private CheckBox sabotage_iii;
-
-	@FXML
-	private CheckBox sabotage_iv;
-
-	@FXML
-	private CheckBox interception_i;
-
-	@FXML
-	private CheckBox interception_ii;
-
-	@FXML
-	private CheckBox interception_iii;
-
-	@FXML
-	private CheckBox interception_iv;
-
-	@FXML
-	private CheckBox survival_i;
-
-	@FXML
-	private CheckBox survival_ii;
-
-	@FXML
-	private CheckBox survival_iii;
-
-	@FXML
-	private CheckBox survival_iv;
 
 	@FXML
 	private GridPane grid_weapons;
+
+	// Weapons
 
 	@FXML
 	private CheckBox ceramic_dagger;
@@ -349,6 +300,8 @@ public class Settings_Controller implements Initializable {
 
 	@FXML
 	private CheckBox plasma_sword;
+
+	// TODO: Add operation weapon parts
 
 	@FXML
 	private Button save;
@@ -401,7 +354,6 @@ public class Settings_Controller implements Initializable {
 			this.grid_mods.getChildren(),
 			this.grid_resources.getChildren(),
 			this.grid_vauban.getChildren(),
-			this.grid_void_keys.getChildren(),
 			this.grid_weapons.getChildren()
 
 		);
