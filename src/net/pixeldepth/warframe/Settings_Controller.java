@@ -253,6 +253,8 @@ public class Settings_Controller implements Initializable {
 	@FXML
 	private CheckBox mutagen_mass;
 
+	@FXML
+	private CheckBox synthula;
 
 	@FXML
 	private GridPane grid_vauban;

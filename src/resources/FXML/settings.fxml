@@ -188,6 +188,8 @@
 										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 									</rowConstraints>
 									<padding>
 										<Insets left="20.0" />
@@ -210,10 +212,11 @@
 										<CheckBox fx:id="argon_crystal" mnemonicParsing="false" text="Argon Crystal" GridPane.columnIndex="1" />
 										<CheckBox fx:id="cryotic" mnemonicParsing="false" text="Cryotic" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 										<CheckBox fx:id="oxium" mnemonicParsing="false" text="Oxium" GridPane.rowIndex="5" />
-										<CheckBox fx:id="tellurium" mnemonicParsing="false" text="Tellurium" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+										<CheckBox fx:id="tellurium" mnemonicParsing="false" text="Tellurium" GridPane.rowIndex="7" />
 										<CheckBox fx:id="mutagen_mass" mnemonicParsing="false" text="Mutagen Mass" GridPane.rowIndex="3" />
 										<CheckBox fx:id="detonite_injector" mnemonicParsing="false" text="Detonite Injector" GridPane.columnIndex="2" GridPane.rowIndex="1" />
 										<CheckBox fx:id="fieldron" mnemonicParsing="false" text="Fieldron" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="synthula" mnemonicParsing="false" text="Synthula" GridPane.columnIndex="2" GridPane.rowIndex="6" />
 									</children>
 								</GridPane>
 							</children></AnchorPane>
