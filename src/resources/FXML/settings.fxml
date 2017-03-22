@@ -7,15 +7,16 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane fx:id="root_node" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="462.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.pixeldepth.warframe.Settings_Controller">
+<BorderPane fx:id="root_node" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="462.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.pixeldepth.warframe.Settings_Controller">
 	<top>
-		<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="708.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+		<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="720.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
 			<tabs>
 				<Tab text="Auras">
 					<content>
@@ -38,30 +39,102 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 									</rowConstraints>
 									<children>
-										<CheckBox fx:id="corrosive_projection" mnemonicParsing="false" text="Corrosive Projection" GridPane.columnIndex="1" />
-										<CheckBox fx:id="dead_eye" mnemonicParsing="false" text="Dead Eye" GridPane.columnIndex="2" />
-										<CheckBox fx:id="emp_aura" mnemonicParsing="false" text="EMP Aura" GridPane.rowIndex="1" />
-										<CheckBox fx:id="loot_detector" mnemonicParsing="false" text="Loot Detector" GridPane.rowIndex="3" />
-										<CheckBox fx:id="physique" mnemonicParsing="false" text="Physique" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-										<CheckBox fx:id="rejuvenation" mnemonicParsing="false" text="Rejuvenation" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-										<CheckBox fx:id="rifle_amp" mnemonicParsing="false" text="Rifle Amp" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-										<CheckBox fx:id="enemy_radar" mnemonicParsing="false" text="Enemy Radar" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-										<CheckBox fx:id="pistol_scavenger" mnemonicParsing="false" text="Pistol Scavenger" GridPane.rowIndex="4" />
-										<CheckBox fx:id="rifle_scavenger" mnemonicParsing="false" text="Rifle Scavenger" GridPane.rowIndex="5" />
-										<CheckBox fx:id="sniper_scavenger" mnemonicParsing="false" text="Sniper Scavenger" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-										<CheckBox fx:id="shotgun_scavenger" mnemonicParsing="false" text="Shotgun Scavenger" GridPane.rowIndex="6" />
-										<CheckBox fx:id="shield_disruption" mnemonicParsing="false" text="Shield Disruption" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-										<CheckBox fx:id="speed_holster" mnemonicParsing="false" text="Speed Holster" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-										<CheckBox fx:id="energy_siphon" mnemonicParsing="false" text="Energy Siphon" GridPane.rowIndex="2" />
-										<CheckBox fx:id="infested_impedance" mnemonicParsing="false" text="Infested Impedance" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                              <CheckBox fx:id="brief_respite" mnemonicParsing="false" text="Brief Respite" />
-                              <CheckBox fx:id="empowered_blades" mnemonicParsing="false" text="Empowered Blades" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <CheckBox fx:id="growing_power" mnemonicParsing="false" text="Growing Power" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <CheckBox fx:id="pistol_amp" mnemonicParsing="false" text="Pistol Amp" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                              <CheckBox fx:id="shotgun_amp" mnemonicParsing="false" text="Shotgun Amp" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                              <CheckBox fx:id="sprint_boost" mnemonicParsing="false" text="Sprint Boost" GridPane.rowIndex="7" />
-                              <CheckBox fx:id="stand_united" mnemonicParsing="false" text="Stand United" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                              <CheckBox fx:id="steel_charge" mnemonicParsing="false" text="Steel Charge" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+										<CheckBox fx:id="corrosive_projection" mnemonicParsing="false" text="Corrosive Projection" GridPane.columnIndex="1">
+                                 <tooltip>
+                                    <Tooltip text="Reduces enemy armor rating by 5% (30% at max level). &#10;Can be stacked to increase effectiveness, but has no effect beyond 100%." wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="dead_eye" mnemonicParsing="false" text="Dead Eye" GridPane.columnIndex="2">
+                                 <tooltip>
+                                    <Tooltip text="Increases Sniper weapon damage by 8.75% per rank, up to 35% at max.&#10;Can be stacked for a maximum of 140% damage." wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="emp_aura" mnemonicParsing="false" text="EMP Aura" GridPane.rowIndex="1">
+                                 <tooltip>
+                                    <Tooltip text="Reduces the accuracy of Corpus enemies." wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="loot_detector" mnemonicParsing="false" text="Loot Detector" GridPane.rowIndex="3">
+                                 <tooltip>
+                                    <Tooltip text="Displays resources, breakable containers, and lockers on the minimap for you and other players. &#10;It also highlights mods with a yellow glow, visible through walls and other parts of the environment. &#10;Will stack with the Thief's Wit mod." wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="physique" mnemonicParsing="false" text="Physique" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <tooltip>
+                                    <Tooltip text="Increases maximum health by 3% (18% at max level) for you and each member of your team. &#10;Can be stacked to increase effectiveness for other players who do not have the mod, not the &#10;owner." wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="rejuvenation" mnemonicParsing="false" text="Rejuvenation" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <tooltip>
+                                    <Tooltip text="Adds health regeneration of 0.5 (3 at max level) per second for everyone on your team. &#10;Can be stacked to increase effectiveness. " wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="rifle_amp" mnemonicParsing="false" text="Rifle Amp" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <tooltip>
+                                    <Tooltip text="Increases Rifle damage by 4.5% (27% at max level) for you and each member of your team. &#10;Can be stacked to create a maximum of 108% damage." wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="enemy_radar" mnemonicParsing="false" text="Enemy Radar" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <tooltip>
+                                    <Tooltip text="Causes enemies to be shown on the mini map for you and your team for 5 game meters each level (30 meters at max level). &#10;This does not replace the Enemy Sense, a mod that does the same effect, but only affects you, whereas this affects everyone's &#10;map. Can be stacked to allow enemies to show up sooner on your mini map." wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="pistol_scavenger" mnemonicParsing="false" text="Pistol Scavenger" GridPane.rowIndex="4">
+                                 <tooltip>
+                                    <Tooltip text="Increases the amount of pistol ammo gained when picking up a pistol ammo drop by 25% per level (150% at max level) &#10;for you and each member of your team. Can be stacked to increase ammo gained." wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="rifle_scavenger" mnemonicParsing="false" text="Rifle Scavenger" GridPane.rowIndex="5">
+                                 <tooltip>
+                                    <Tooltip text="Increases the amount of rifle ammo gained when picking up a rifle ammo drop by 25% per level (150% at max level) for you and each member of your team. &#10;Can be stacked to increase ammo gained." wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="sniper_scavenger" mnemonicParsing="false" text="Sniper Scavenger" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <tooltip>
+                                    <Tooltip text="Increases the amount of sniper ammo gained when picking up a sniper ammo drop by 25% per level (150% at max level) for you and each member of your team. &#10;Can be stacked to increase ammo gained. " wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="shotgun_scavenger" mnemonicParsing="false" text="Shotgun Scavenger" GridPane.rowIndex="6">
+                                 <tooltip>
+                                    <Tooltip text="Increases the amount of shotgun ammo gained when picking up a shotgun ammo drop by 25% per level (150% at max level) &#10;for you and each member of your team. Can be stacked to increase ammo gained. " wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="shield_disruption" mnemonicParsing="false" text="Shield Disruption" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <tooltip>
+                                    <Tooltip text="Reduces enemy shields by 4% (24% at max level). Can be stacked to increase effectiveness. &#10;This includes shield bonuses given from Shield Ospreys." wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="speed_holster" mnemonicParsing="false" text="Speed Holster" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                 <tooltip>
+                                    <Tooltip text="Increases weapon swap speed by 20% per level (80% at max level) for you and each member of your team. &#10;Can be stacked for a maximum of 320% holster rate." wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="energy_siphon" mnemonicParsing="false" text="Energy Siphon" GridPane.rowIndex="2">
+                                 <tooltip>
+                                    <Tooltip text="Adds energy regeneration of 0.1 (0.6 at max level) per second for everyone on your team. &#10;Can be stacked to increase effectiveness." wrapText="true" />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="infested_impedance" mnemonicParsing="false" text="Infested Impedance" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <tooltip>
+                                    <Tooltip text="Reduces the overall speed, including attacks, by 3% (18% at max level) for all Infested enemies, and &#10;can be stacked to increase effectiveness for a max reduction of 72%." wrapText="true" />
+                                 </tooltip></CheckBox>
+                              <CheckBox fx:id="brief_respite" mnemonicParsing="false" text="Brief Respite">
+                                 <tooltip>
+                                    <Tooltip text="Casting an ability grants additional shields equal to 150% of the energy spent when Overshields are inactive." wrapText="true" />
+                                 </tooltip></CheckBox>
+                              <CheckBox fx:id="empowered_blades" mnemonicParsing="false" text="Empowered Blades" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <tooltip>
+                                    <Tooltip text="Increases the Status chance and Status damage of charged melee attacks, but drains the user's shield by 90 per hit." wrapText="true" />
+                                 </tooltip></CheckBox>
+                              <CheckBox fx:id="growing_power" mnemonicParsing="false" text="Growing Power" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <tooltip>
+                                    <Tooltip text="Increases Power Strength by 25% for 6 seconds every time a status is procced." wrapText="true" />
+                                 </tooltip></CheckBox>
+                              <CheckBox fx:id="pistol_amp" mnemonicParsing="false" text="Pistol Amp" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <tooltip>
+                                    <Tooltip text="Increases Sidearm damage by 4.5% (27% at max level) for you and each member of &#10;your team. Can be stacked to create a maximum of 108% damage. " wrapText="true" />
+                                 </tooltip></CheckBox>
+                              <CheckBox fx:id="shotgun_amp" mnemonicParsing="false" text="Shotgun Amp" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <tooltip>
+                                    <Tooltip text="Increases Shotgun damage by 3% (18% at max level) for you and each member of your team. &#10;Can be stacked to create a maximum of 72% damage. " wrapText="true" />
+                                 </tooltip></CheckBox>
+                              <CheckBox fx:id="sprint_boost" mnemonicParsing="false" text="Sprint Boost" GridPane.rowIndex="7">
+                                 <tooltip>
+                                    <Tooltip text="Increases sprint speed by 2.5% per rank, for a maximum of 10% at max rank. &#10;Stacks with other teammates using it for a maximum of 40% sprint speed bonus." wrapText="true" />
+                                 </tooltip></CheckBox>
+                              <CheckBox fx:id="stand_united" mnemonicParsing="false" text="Stand United" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                 <tooltip>
+                                    <Tooltip text="Increases Armor by 25.5% for you and each member of your team. &#10;Can be stacked to create a maximum of 102% additional Armor. " wrapText="true" />
+                                 </tooltip></CheckBox>
+                              <CheckBox fx:id="steel_charge" mnemonicParsing="false" text="Steel Charge" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                 <tooltip>
+                                    <Tooltip text="Increases normal melee attack damage by 10% per rank, for a maximum of 60% at max rank. &#10;Stacks with other teammates using it for a maximum of 240% normal melee attack damage." wrapText="true" />
+                                 </tooltip></CheckBox>
 									</children>
 									<padding>
 										<Insets left="20.0" />
@@ -89,10 +162,22 @@
 										<Insets left="20.0" />
 									</padding>
 									<children>
-										<CheckBox fx:id="orokin_catalyst" mnemonicParsing="false" text="Orokin Catalyst" />
-										<CheckBox fx:id="orokin_reactor" mnemonicParsing="false" text="Orokin Reactor" GridPane.columnIndex="1" />
-										<CheckBox fx:id="forma" mnemonicParsing="false" text="Forma" GridPane.columnIndex="2" />
-										<CheckBox fx:id="exilus_adapter" mnemonicParsing="false" text="Exilus Adapter" GridPane.rowIndex="1" />
+										<CheckBox fx:id="orokin_catalyst" mnemonicParsing="false" text="Orokin Catalyst">
+                                 <tooltip>
+                                    <Tooltip text="An item used to supercharge Weapons, including those for Archwings or Sentinels, doubling their mod capacity." />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="orokin_reactor" mnemonicParsing="false" text="Orokin Reactor" GridPane.columnIndex="1">
+                                 <tooltip>
+                                    <Tooltip text="An item used to supercharge Warframes, Archwings and Companions, doubling their mod capacity." />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="forma" mnemonicParsing="false" text="Forma" GridPane.columnIndex="2">
+                                 <tooltip>
+                                    <Tooltip text="A resource used to add, remove, or alter the Polarity of a Mod slot on Warframes, weapons, or &#10;Companions; add Tiles to a Clan Dojo; or serve as a component in the creation of certain &#10;weapons and items." />
+                                 </tooltip></CheckBox>
+										<CheckBox fx:id="exilus_adapter" mnemonicParsing="false" text="Exilus Adapter" GridPane.rowIndex="1">
+                                 <tooltip>
+                                    <Tooltip text="A special item that can be fused with a Warframe to unlock an Exilus Mod Slot, &#10;which is a special additional slot that can be used solely for Exilus Mods" />
+                                 </tooltip></CheckBox>
 									</children>
 								</GridPane>
 							</children></AnchorPane>

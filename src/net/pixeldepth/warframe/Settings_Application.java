@@ -28,7 +28,7 @@ public class Settings_Application {
 
 		stage.setTitle("Warframe Notifications - Settings");
 
-		Scene scene = new Scene(root, 730, 462);
+		Scene scene = new Scene(root, 720, 462);
 
 		stage.setScene(scene);
 		stage.initStyle(StageStyle.UTILITY);
